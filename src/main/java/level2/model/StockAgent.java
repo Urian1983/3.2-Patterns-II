@@ -8,12 +8,6 @@ public class StockAgent {
     private double stockValue;
     private String name;
 
-
-
-    public List<Observer> getObservers() {
-        return observers;
-    }
-
     public StockAgent(String name) {
         this.name = name;
     }
@@ -29,7 +23,7 @@ public class StockAgent {
     }
 
     public void notifyObservers() {
-        observers.forEach(o->updateStock(stockValue));
+        observers.forEach(o->o.updateStock(stockValue));
 
     }
 

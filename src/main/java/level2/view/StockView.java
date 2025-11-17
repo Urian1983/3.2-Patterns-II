@@ -16,9 +16,10 @@ public class StockView {
         while(!exit){
             System.out.println("\n--- Stock System Menu ---");
             System.out.println("1. Add new trader");
-            System.out.println("2. Set new stock value");
-            System.out.println("3. Print all the StockAgents");
-            System.out.println("4. Exit");
+            System.out.println("2. Remove existing trader");
+            System.out.println("3. Set new stock value");
+            System.out.println("4. Print all the current traders");
+            System.out.println("5. Exit");
             System.out.print("Choose an option: ");
 
             int option = scanner.nextInt();
@@ -29,11 +30,15 @@ public class StockView {
                     addTrader();
                     break;
                 case 2:
-                    updateStockValue();
+                    removeTrader();
                     break;
                 case 3:
-                    stockAgent.notifyObservers();
+                    updateStockValue();
+                    break;
                 case 4:
+                    stockAgent.printObservers();
+                    break;
+                case 5:
                     exit = true;
                     break;
                 default:
@@ -42,6 +47,15 @@ public class StockView {
         }
 
         System.out.println("Exiting...");
+    }
+
+    public void removeTrader(){
+        System.out.println("Type the name of the trader to remove");
+        String traderName= scanner.nextLine();
+
+        StockTrader traderToRemove = new StockTrader(traderName);
+
+        stockAgent.removeObserver(traderToRemove);
     }
 
     public void addTrader(){
