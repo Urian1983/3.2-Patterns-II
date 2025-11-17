@@ -13,7 +13,6 @@ public class Dough {
 
     public enum DoughType {
         NAPOLITANA,
-        ROMANA,
         AMERICANA,
         PIZZA_BLANCA;
     }

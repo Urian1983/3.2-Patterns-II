@@ -12,10 +12,10 @@ public class Base {
     }
 
     public enum BaseType{
-        FINA,
-        AMERICANA,
-        SIN_GLUTEN,
-        ROLLING;
+        SMALL,
+        STANDARD,
+        BIG,
+        XXL;
     }
 
 }
