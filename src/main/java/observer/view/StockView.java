@@ -1,7 +1,7 @@
-package level2.view;
+package observer.view;
 
-import level2.model.StockAgent;
-import level2.model.StockTrader;
+import observer.model.StockAgent;
+import observer.model.StockTrader;
 
 import java.util.Scanner;
 

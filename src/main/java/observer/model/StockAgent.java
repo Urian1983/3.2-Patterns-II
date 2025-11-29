@@ -1,10 +1,10 @@
-package level2.model;
+package observer.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class StockAgent {
-    private List<Observer> observers = new ArrayList<>();
+    private List<Trader> traders = new ArrayList<>();
     private double stockValue;
     private String name;
 
@@ -12,23 +12,24 @@ public class StockAgent {
         this.name = name;
     }
 
-    public void addObserver(Observer observer) {
-        observers.add(observer);
+    public void addObserver(Trader trader) {
+        traders.add(trader);
+
 
     }
 
-    public void removeObserver(Observer observer) {
-        observers.remove(observer);
+    public void removeObserver(Trader trader) {
+        traders.remove(trader);
 
     }
 
     public void notifyObservers() {
-        observers.forEach(o->o.updateStock(stockValue));
+        traders.forEach(o->o.updateStock(stockValue));
 
     }
 
     public void printObservers(){
-        observers.forEach(o->System.out.println(o.getName()));
+        traders.forEach(o->System.out.println(o.getName()));
     }
 
     public void updateStock(double stockValue) {

@@ -1,8 +1,6 @@
-package level2;
+package observer;
 
-import level2.view.StockView;
-
-import java.util.Scanner;
+import observer.view.StockView;
 
 public class MainLevel2 {
     public static void main(String[] args) {

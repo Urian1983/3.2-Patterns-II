@@ -1,8 +1,8 @@
-package level2.model;
+package observer.model;
 
 import java.util.Objects;
 
-public class StockTrader implements Observer{
+public class StockTrader implements Trader {
     private String name;
 
     public StockTrader(String name) {

@@ -1,6 +1,6 @@
-package level2.model;
+package observer.model;
 
-public interface Observer {
+public interface Trader {
     String getName();
     void updateStock (double newValue);
 }
